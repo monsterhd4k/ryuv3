@@ -4037,7 +4037,7 @@ break
 default:
 if (body.startsWith(`${prefix}${command}`)) {
 
-                  reply(`Hai Kak ${pushname},  Command ${prefix}${command} Tidak Ada Di Dalam ${prefix}menu ${botname}`)
+                  reply(`Hola👋🏻 *"${pushname}"*, El comando ${prefix}${command} no existe\n💡 Puedes ver el menu escribiendo ${prefix}menu )
 			  }
 if(budy.includes("@verif", "@verify","daftar")){
 if (isUser) return reply('Kamu sudah terdaftar di dalam database')
