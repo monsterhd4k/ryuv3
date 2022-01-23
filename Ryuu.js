@@ -678,82 +678,145 @@ case 'self':
 	  stst = stst.status == 401 ? '' : stst.status
             const modde = public ? 'PUBLIC': 'SELF'
             listMsg = {
-            buttonText: 'MENU DE LISTA 📋',
+            buttonText: 'MENU DISINI 💻',
             footerText: fake,
-            description: `Hola 👋🏻 @${sender.split('@')[0]} !
+            description: `*Hai Kak* @${sender.split('@')[0]} ${jams}
 
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗗𝗘𝗟 𝗨𝗦𝗨𝗔𝗥𝗜𝗢 」⬣
-│✾ 𝙉𝙤𝙢𝙗𝙧𝙚 : ${pushname}
-│✾ 𝙀𝙨𝙩𝙖𝙙𝙤 : ${isOwner? "Owner️":"Usuario"}
+╭─⬣「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥 」⬣
+│✾ 𝙉𝙖𝙢𝙚 : ${pushname}
+│✾ 𝙏𝙖𝙜𝙨 : @${sender.split("@")[0]}
+│✾ 𝙎𝙩𝙖𝙩𝙪𝙨 : ${isOwner? "Owner️":"User"}
 ╰─⬣
 
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗗𝗘𝗟 𝗕𝗢𝗧 」⬣
-│✾ 𝙋𝙧𝙚𝙛𝙞𝙟𝙤 𝙙𝙚𝙡 𝘽𝙤𝙩 : ⌜ ${prefix} ⌟
-│✾ 𝙉𝙤𝙢𝙗𝙧𝙚 𝙙𝙚𝙡 𝘽𝙤𝙩 : ${botname}
-│✾ 𝙉𝙤𝙢𝙗𝙧𝙚 𝙙𝙚𝙡 𝙊𝙬𝙣𝙚𝙧 : ${ownername}
-│✾ 𝙈𝙤𝙙𝙤 : ${modde}
-│✾ 𝙏𝙞𝙚𝙢𝙥𝙤 𝙖𝙘𝙩𝙞𝙫𝙤 : ${runtime(process.uptime())}
+╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
+│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜ ${prefix} ⌟
+│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
+│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
+│✾ 𝙈𝙤𝙙𝙚 : ${modde}
+│✾ 𝙍𝙪𝙣 : ${runtime(process.uptime())}
 │✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
 ╰─⬣
 
-𝙋𝙧𝙚𝙨𝙞𝙤𝙣𝙚 𝙚𝙡 𝙗𝙤𝙩𝙤𝙣 𝙙𝙚 𝙖𝙗𝙖𝙟𝙤 𝙥𝙖𝙧𝙖 𝙨𝙚𝙡𝙚𝙘𝙘𝙞𝙤𝙣𝙖𝙧 𝙚𝙡 𝙢𝙚𝙣𝙪`, 
+╭─⬣「 𝗜𝗡𝗗𝗢𝗡𝗘𝗦𝗜𝗔 𝗧𝗜𝗠𝗘 」⬣
+│✾ 𝙒𝙞𝙗 : ${timeWib}
+│✾ 𝙒𝙞𝙩𝙖 : ${timeWita}
+│✾ 𝙒𝙞𝙩 : ${timeWit}  
+╰─⬣
+
+𝙋𝙚𝙣𝙘𝙚𝙩 𝘽𝙪𝙩𝙩𝙤𝙣 𝘿𝙞 𝘽𝙖𝙬𝙖𝙝 𝙄𝙣𝙞 𝙐𝙣𝙩𝙪𝙠 𝙈𝙚𝙢𝙞𝙡𝙞𝙝 𝙈𝙚𝙣𝙪`, 
             sections: [
             {
+            "title": `Silahkan Dipilih Kak ${pushname} 🤗`,
             rows: [
             {
-              "title": "MENU COMPLETO [💯]",
+              "title": "ALL MENU [🕊️]",
               "rowId": `${prefix}allmenu`,
-              "description": `Mostrar el menu completo ${botname}`
+              "description": `Menampilkan Seluruh Menu ${botname}`
             },
             {
-              "title": "MENU DE SONIDOS [💿]",
+              "title": "STORE MENU [💎]",
+              "rowId": `${prefix}storemenu`, 
+              "description": `Menampilkan Seluruh Store ${botname}`
+            },
+            {
+              "title": "SOUND MENU [💿]",
               "rowId": `${prefix}soundmenu`, 
-              "description": `Mostrar menu de Sonidos ${botname}`
+              "description": `Menampilkan Seluruh Sound ${botname}`
             },
             {
-              "title": "MENU DE AUDIO [🎙]",
+              "title": "AUDIOMENU [🎙]",
               "rowId": `${prefix}audiomenu`, 
-              "description": `Mostrar menu de Audio ${botname}`
+              "description": `Menampilkan Seluruh Audio ${botname}`
             },
             {
-              "title": "MENU DE GRUPO [🏠]‍‍",
+              "title": "NEKOPOI MENU [🎞]",
+              "rowId": `${prefix}nekopoimenu`, 
+              "description": `Menampilkan Seluruh Nekopoi ${botname}`
+            },
+            {
+              "title": "GROUP MENU [👨]‍‍",
               "rowId": `${prefix}grupmenu`, 
-              "description": `Mostrar menu de Grupo ${botname}`
+              "description": `Menampilkan Seluruh Group ${botname}`
             },
             {
-              "title": "MENU DE OWNER [👤]",
+              "title": "OWNER MENU [👤]",
               "rowId": `${prefix}ownermenu`, 
-              "description": `Mostrar menu de Owner ${botname}`
+              "description": `Menampilkan Seluruh Owner ${botname}`
             },
             {
-              "title": "‍MENU NSFW [🔞]",
+              "title": "‍NSFW MENU [🔞]",
               "rowId": `${prefix}nsfwmenu`, 
-              "description": `Mostrar menu NSFW ${botname}`
+              "description": `Menampilkan Seluruh Nsfw ${botname}`
             },
             {
-              "title": "‍MENU DE TEXTPROME [⌨️]",
+              "title": "‍ISLAMI MENU [🕋]",
+              "rowId": `${prefix}islamimenu`, 
+              "description": `Menampilkan Seluruh Islami ${botname}`
+            },
+            {
+              "title": "‍TEXTPROME MENU [⌨️]",
               "rowId": `${prefix}textpromemenu`, 
-              "description": `Mostrar menu de Textprome ${botname}`
+              "description": `Menampilkan Seluruh Textprome ${botname}`
             },
             {
-              "title": "‍MENU DE POTOOXY [📸️]",
+              "title": "‍POTOOXY MENU [📸️]",
               "rowId": `${prefix}potooxymenu`, 
-              "description": `Mostrar menu de Potooxy ${botname}`
+              "description": `Menampilkan Seluruh Potooxy ${botname}`
             },
             {
-              "title": "‍MENU DE EPHOTO [✉️️]",
+              "title": "‍EPHOTO MENU [✉️️]",
               "rowId": `${prefix}ephotomenu`, 
-              "description": `Mostrar menu de Ephoto 360 ${botname}`
+              "description": `Menampilkan Seluruh Ephoto 360 ${botname}`
             },
             {
-              "title": "‍ANIME MENU [🦄]",
+              "title": "‍WAR MENU [️💀]",
+              "rowId": `${prefix}warmenu`, 
+              "description": `Menampilkan Seluruh War ${botname}`
+            },
+            {
+              "title": "‍ANIME MENU [💕️]",
               "rowId": `${prefix}animemenu`, 
-              "description": `Mostrar menu de Anime ${botname}`
+              "description": `Menampilkan Seluruh Anime ${botname}`
             },
             {
-              "title": "MENU DE DESCARGAS [💾]",
+              "title": "‍ASUPAN MENU [👩‍🦰]",
+              "rowId": `${prefix}asupanmenu`, 
+              "description": `Menampilkan Seluruh Asupan ${botname}`
+            },
+            {
+              "title": "‍CECAN MENU [👯]",
+              "rowId": `${prefix}cecanmenu`, 
+              "description": `Menampilkan Seluruh Cecan ${botname}`
+            },
+            {
+              "title": "FUN MENU [🚲]",
+              "rowId": `${prefix}funmenu`, 
+              "description": `Menampilkan Seluruh Fun ${botname}`
+            },
+            {
+              "title": "DOWNLOAD MENU [💾]",
               "rowId": `${prefix}downloadmenu`, 
-              "description": `Mostrar menu de Descargas ${botname}`
+              "description": `Menampilkan Seluruh Download ${botname}`
+            },
+            {
+              "title": "DONASI [🎁]",
+              "rowId": `${prefix}donasi`, 
+              "description": `Menampilkan Donasi ${botname}`
+            },
+            {
+              "title": "SOURCE CODE [💻]",
+              "rowId": `${prefix}sc`, 
+              "description": `Menampilkan Script Bot RyuBotz`
+            },
+            {
+              "title": "BIG THANKS TO [🏆]",
+              "rowId": `${prefix}tqto`, 
+              "description": `Menampilkan Thanks ${botname}`
+            },
+            {
+              "title": "RULES [📚]",
+              "rowId": `${prefix}rules`, 
+              "description": `Menampilkan Rules Pengguna Bot ${botname}`
             }
             ]
             }],
@@ -765,9 +828,39 @@ case 'allmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 const modee = public ? 'PUBLIC': 'SELF'
 menu =
-`Hola 👋🏻 @${sender.split('@')[0]} !
+`*Hai @${sender.split('@')[0]} ${jams}*
 
-╭─⬣「 𝗠𝗘𝗡𝗨 𝗩𝗔𝗥𝗜𝗔𝗗𝗢 」⬣
+𝙟𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙗𝙖𝙝𝙖𝙜𝙞𝙖🍵
+
+╭─⬣「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥 」⬣
+│✾ 𝙉𝙖𝙢𝙚 : ${pushname}
+│✾ 𝙏𝙖𝙜𝙨 : @${sender.split("@")[0]}
+│✾ 𝙎𝙩𝙖𝙩𝙪𝙨 : ${isOwner? "Owner️":"User"}
+╰─⬣
+
+╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
+│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜ ${prefix} ⌟
+│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
+│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
+│✾ 𝙈𝙤𝙙𝙚 : ${modee}
+│✾ 𝙍𝙪𝙣 : ${runtime(process.uptime())}
+│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+╰─⬣
+
+╭─⬣「 𝗧𝗢 𝗗𝗔𝗬 」⬣
+│✾ 𝙐𝙘𝙖𝙥𝙖𝙣 : ${jams}
+│✾ 𝘽𝙪𝙡𝙖𝙣 : ${bulan}
+│✾ 𝙃𝙖𝙧𝙞 : ${hari}
+│✾ 𝙏𝙂𝙇 : ${tanggal}
+╰─⬣
+
+╭─⬣「 𝗜𝗡𝗗𝗢𝗡𝗘𝗦𝗜𝗔 𝗧𝗜𝗠𝗘 」⬣
+│✾ 𝙒𝙞𝙗 : ${timeWib}
+│✾ 𝙒𝙞𝙩𝙖 : ${timeWita}
+│✾ 𝙒𝙞𝙩 : ${timeWit}  
+╰─⬣
+
+╭─⬣「 𝗢𝗧𝗛𝗘𝗥 𝗠𝗘𝗡𝗨 」⬣
 │✾ ${prefix}report
 │✾ ${prefix}rules
 │✾ ${prefix}ping / speed
@@ -776,17 +869,31 @@ menu =
 │✾ ${prefix}daftar
 ╰─⬣
 
-╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗢𝗪𝗡𝗘𝗥 」⬣
+╭─⬣「 𝗢𝗪𝗡𝗘𝗥 𝗠𝗘𝗡𝗨 」⬣
 │✾ ${prefix}owner
-│✾ ${prefix}bc *texto*
-│✾ ${prefix}setbiobot *texto*
-│✾ ${prefix}setnamabot *texto*
+│✾ ${prefix}bc *Teks*
+│✾ ${prefix}setbiobot *teks*
+│✾ ${prefix}setnamabot *teks*
 │✾ ${prefix}delete
 │✾ ${prefix}public
 │✾ ${prefix}self
 ╰─⬣
 
-╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗚𝗥𝗨𝗣𝗢 」⬣
+╭─⬣「 𝗪𝗔𝗥 𝗠𝗘𝗡𝗨 」⬣
+│✾ ${prefix}virtex1
+│✾ ${prefix}virtex2
+│✾ ${prefix}virtex3
+│✾ ${prefix}virtex4
+│✾ ${prefix}virtex5
+│✾ ${prefix}virtex6
+│✾ ${prefix}virtex7
+│✾ ${prefix}virtex8
+│✾ ${prefix}virtag
+│✾ ${prefix}emoji
+│✾ ${prefix}ngazab
+╰─⬣
+
+╭─⬣「 𝗚𝗥𝗨𝗣 𝗠𝗘𝗡𝗨 」⬣
 │✾ ${prefix}antilink *on / off*
 │✾ ${prefix}antivirtex *on / off*
 │✾ ${prefix}welcome *on / off*
@@ -796,16 +903,16 @@ menu =
 │✾ ${prefix}add *628xx*
 │✾ ${prefix}kick *@tag / reply*
 │✾ ${prefix}setpp *reply / cap*
-│✾ ${prefix}setdesc *texto*
-│✾ ${prefix}setname *texto*
-│✾ ${prefix}hidetag *texto*
+│✾ ${prefix}setdesc *teks*
+│✾ ${prefix}setname *teks*
+│✾ ${prefix}hidetag *teks*
 │✾ ${prefix}linkgrup
 │✾ ${prefix}infogrup
 │✾ ${prefix}listonline
 │✾ ${prefix}resetlinkgrup
 ╰─⬣
 
-╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗗𝗘𝗦𝗖𝗔𝗥𝗚𝗔𝗦 」⬣
+╭─⬣「 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗠𝗘𝗡𝗨 」⬣
 │✾ ${prefix}ytmp3 *Link*
 │✾ ${prefix}ytmp4 *Link*
 │✾ ${prefix}playstore *search*
@@ -823,100 +930,100 @@ menu =
 │✾ ${prefix}jooxplay *teks*
 ╰─⬣
 
-╭─⬣「 𝗠𝗘𝗡𝗨 𝗘𝗣𝗛𝗢𝗧𝗢 𝟯𝟲𝟬 」⬣
-│✾ ${prefix}wetglass *texto*
-│✾ ${prefix}multicolor3d *texto*
-│✾ ${prefix}watercolor *texto*
-│✾ ${prefix}luxurygold *texto*
-│✾ ${prefix}galaxywallpaper *texto*
-│✾ ${prefix}lighttext *texto*
-│✾ ${prefix}beautifulflower *texto*
-│✾ ${prefix}puppycute *texto*
-│✾ ${prefix}royaltext *texto*
-│✾ ${prefix}heartshaped *texto*
-│✾ ${prefix}birthdaycake *texto*
-│✾ ${prefix}galaxystyle *texto*
-│✾ ${prefix}hologram3d *texto*
-│✾ ${prefix}greenneon *texto*
-│✾ ${prefix}glossychrome *texto*
-│✾ ${prefix}greenbush *texto*
-│✾ ${prefix}metallogo *texto*
-│✾ ${prefix}noeltext *texto*
-│✾ ${prefix}glittergold *texto*
-│✾ ${prefix}textcake *texto*
-│✾ ${prefix}starsnight *texto*
-│✾ ${prefix}wooden3d *texto*
-│✾ ${prefix}textbyname *texto*
-│✾ ${prefix}writegalacy *texto*
-│✾ ${prefix}galaxybat *texto*
-│✾ ${prefix}snow3d *texto*
-│✾ ${prefix}birthdayday *texto*
-│✾ ${prefix}goldplaybutton *texto*
-│✾ ${prefix}silverplaybutton *texto*
+╭─⬣「 𝗘𝗣𝗛𝗢𝗧𝗢 𝟯𝟲𝟬 𝗠𝗘𝗡𝗨 」⬣
+│✾ ${prefix}wetglass *teks*
+│✾ ${prefix}multicolor3d *teks*
+│✾ ${prefix}watercolor *teks*
+│✾ ${prefix}luxurygold *teks*
+│✾ ${prefix}galaxywallpaper *teks*
+│✾ ${prefix}lighttext *teks*
+│✾ ${prefix}beautifulflower *teks*
+│✾ ${prefix}puppycute *teks*
+│✾ ${prefix}royaltext *teks*
+│✾ ${prefix}heartshaped *teks*
+│✾ ${prefix}birthdaycake *teks*
+│✾ ${prefix}galaxystyle *teks*
+│✾ ${prefix}hologram3d *teks*
+│✾ ${prefix}greenneon *teks*
+│✾ ${prefix}glossychrome *teks*
+│✾ ${prefix}greenbush *teks*
+│✾ ${prefix}metallogo *teks*
+│✾ ${prefix}noeltext *teks*
+│✾ ${prefix}glittergold *teks*
+│✾ ${prefix}textcake *teks*
+│✾ ${prefix}starsnight *teks*
+│✾ ${prefix}wooden3d *teks*
+│✾ ${prefix}textbyname *teks*
+│✾ ${prefix}writegalacy *teks*
+│✾ ${prefix}galaxybat *teks*
+│✾ ${prefix}snow3d *teks*
+│✾ ${prefix}birthdayday *teks*
+│✾ ${prefix}goldplaybutton *teks*
+│✾ ${prefix}silverplaybutton *teks*
 ╰─⬣
 
-╭─⬣「 𝗠𝗘𝗡𝗨 𝗣𝗢𝗧𝗢𝗢𝗫𝗬 」⬣
-│✾ ${prefix}shadow *texto*
-│✾ ${prefix}cup *texto*
-│✾ ${prefix}cup1 *texto*
-│✾ ${prefix}romance *texto*
-│✾ ${prefix}smoke *texto*
-│✾ ${prefix}burnpaper *texto*
-│✾ ${prefix}lovemessage *texto*
-│✾ ${prefix}undergrass *texto*
-│✾ ${prefix}love *texto*
-│✾ ${prefix}coffe *texto*
-│✾ ${prefix}woodheart *texto*
-│✾ ${prefix}woodenboard *texto*
-│✾ ${prefix}summer3d *texto*
-│✾ ${prefix}wolfmetal *texto*
-│✾ ${prefix}nature3d *texto*
-│✾ ${prefix}underwater *texto*
-│✾ ${prefix}golderrose *texto*
-│✾ ${prefix}summernature *texto*
-│✾ ${prefix}letterleaves *texto*
-│✾ ${prefix}glowingneon *texto*
-│✾ ${prefix}fallleaves *texto*
-│✾ ${prefix}flamming *texto*
-│✾ ${prefix}harrypotter *texto*
-│✾ ${prefix}carvedwood *texto*
-│✾ ${prefix}arcade8bit *texto1 texto2*
-│✾ ${prefix}battlefield4 *texto1 texto2*
+╭─⬣「 𝗣𝗢𝗧𝗢𝗢𝗫𝗬 𝗠𝗘𝗡𝗨 」⬣
+│✾ ${prefix}shadow *teks*
+│✾ ${prefix}cup *teks*
+│✾ ${prefix}cup1 *teks*
+│✾ ${prefix}romance *teks*
+│✾ ${prefix}smoke *teks*
+│✾ ${prefix}burnpaper *teks*
+│✾ ${prefix}lovemessage *teks*
+│✾ ${prefix}undergrass *teks*
+│✾ ${prefix}love *teks*
+│✾ ${prefix}coffe *teks*
+│✾ ${prefix}woodheart *teks*
+│✾ ${prefix}woodenboard *teks*
+│✾ ${prefix}summer3d *teks*
+│✾ ${prefix}wolfmetal *teks*
+│✾ ${prefix}nature3d *teks*
+│✾ ${prefix}underwater *teks*
+│✾ ${prefix}golderrose *teks*
+│✾ ${prefix}summernature *teks*
+│✾ ${prefix}letterleaves *teks*
+│✾ ${prefix}glowingneon *teks*
+│✾ ${prefix}fallleaves *teks*
+│✾ ${prefix}flamming *teks*
+│✾ ${prefix}harrypotter *teks*
+│✾ ${prefix}carvedwood *teks*
+│✾ ${prefix}arcade8bit *text1 text2*
+│✾ ${prefix}battlefield4 *text1 text2*
 ╰─⬣
  
-╭─⬣「 𝗠𝗘𝗡𝗨 𝗧𝗘𝗫𝗧𝗣𝗥𝗢𝗠𝗘 」⬣
-│✾ ${prefix}blackpink *texto*
-│✾ ${prefix}neon *texto*
-│✾ ${prefix}greenneon *texto*
-│✾ ${prefix}advanceglow *texto*
-│✾ ${prefix}futureneon *texto*
-│✾ ${prefix}sandwriting *texto*
-│✾ ${prefix}sandsummer *texto*
-│✾ ${prefix}sandengraved *texto*
-│✾ ${prefix}metaldark *texto*
-│✾ ${prefix}neonlight *texto*
-│✾ ${prefix}text1917 *texto*
-│✾ ${prefix}minion *texto*
-│✾ ${prefix}deluxesilver *texto*
-│✾ ${prefix}newyearcard *texto*
-│✾ ${prefix}bloodfrosted *texto*
-│✾ ${prefix}halloween *texto*
-│✾ ${prefix}jokerlogo *texto*
-│✾ ${prefix}fireworksparkle *texto*
-│✾ ${prefix}natureleaves *texto*
-│✾ ${prefix}bokeh *texto*
-│✾ ${prefix}strawberry *texto*
-│✾ ${prefix}box3d *texto*
-│✾ ${prefix}roadwarning *texto*
-│✾ ${prefix}breakwall *texto*
-│✾ ${prefix}icecold *texto*
-│✾ ${prefix}luxury *texto*
-│✾ ${prefix}cloud *texto*
-│✾ ${prefix}summersand *texto*
-│✾ ${prefix}horrorblood *texto*
+╭─⬣「 𝗧𝗘𝗫𝗧𝗣𝗥𝗢𝗠𝗘 𝗠𝗘𝗡𝗨 」⬣
+│✾ ${prefix}blackpink *teks*
+│✾ ${prefix}neon *teks*
+│✾ ${prefix}greenneon *teks*
+│✾ ${prefix}advanceglow *teks*
+│✾ ${prefix}futureneon *teks*
+│✾ ${prefix}sandwriting *teks*
+│✾ ${prefix}sandsummer *teks*
+│✾ ${prefix}sandengraved *teks*
+│✾ ${prefix}metaldark *teks*
+│✾ ${prefix}neonlight *teks*
+│✾ ${prefix}text1917 *teks*
+│✾ ${prefix}minion *teks*
+│✾ ${prefix}deluxesilver *teks*
+│✾ ${prefix}newyearcard *teks*
+│✾ ${prefix}bloodfrosted *teks*
+│✾ ${prefix}halloween *teks*
+│✾ ${prefix}jokerlogo *teks*
+│✾ ${prefix}fireworksparkle *teks*
+│✾ ${prefix}natureleaves *teks*
+│✾ ${prefix}bokeh *teks*
+│✾ ${prefix}strawberry *teks*
+│✾ ${prefix}box3d *teks*
+│✾ ${prefix}roadwarning *teks*
+│✾ ${prefix}breakwall *teks*
+│✾ ${prefix}icecold *teks*
+│✾ ${prefix}luxury *teks*
+│✾ ${prefix}cloud *teks*
+│✾ ${prefix}summersand *teks*
+│✾ ${prefix}horrorblood *teks*
 ╰─⬣
 
-╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗔𝗡𝗜𝗠𝗘 」⬣
+╭─⬣「 𝗔𝗡𝗜𝗡𝗘 𝗠𝗘𝗡𝗨 」⬣
 │✾ ${prefix}manga *search*
 │✾ ${prefix}anime *search*
 │✾ ${prefix}character *search*
@@ -930,19 +1037,69 @@ menu =
 │✾ ${prefix}nekopoisearch *search*
 ╰─⬣
 
-╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗦𝗧𝗜𝗖𝗞𝗘𝗥 」⬣
+╭─⬣「 𝗦𝗧𝗜𝗖𝗞𝗘𝗥 𝗠𝗘𝗡𝗨 」⬣
 │✾ ${prefix}sticker *reply / cap*
 │✾ ${prefix}toimg *reply*
 │✾ ${prefix}ttp
 │✾ ${prefix}attp
 ╰─⬣
 
-╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗖𝗜𝗢𝗡 」⬣
-│✾ ${prefix}wikipedia
-│✾ ${prefix}translate
+╭─⬣「 𝗦𝗧𝗢𝗥𝗘 𝗠𝗘𝗡𝗨 」⬣
+│✾ ${prefix}allpayment
+│✾ ${prefix}freefire
+│✾ ${prefix}mobilelegend
+│✾ ${prefix}sosis
+│✾ ${prefix}format
+│✾ ${prefix}salin
+│✾ ${prefix}lol
+│✾ ${prefix}aov
+│✾ ${prefix}cod
+│✾ ${prefix}valorant
+│✾ ${prefix}sewabot
 ╰─⬣
 
-╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗔𝗨𝗗𝗜𝗢 」⬣
+╭─⬣「 𝗜𝗦𝗟𝗔𝗠𝗜 𝗠𝗘𝗡𝗨 」⬣
+│✾ ${prefix}alquran
+│✾ ${prefix}alquranaudio
+│✾ ${prefix}kisahnabi
+│✾ ${prefix}asmaulhusna
+│✾ ${prefix}jadwalsholat
+│✾ ${prefix}listsurah
+╰─⬣
+
+╭─⬣「 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗦𝗜 𝗠𝗘𝗡𝗨 」⬣
+│✾ ${prefix}kbbi
+│✾ ${prefix}jarak
+│✾ ${prefix}wikipedia
+│✾ ${prefix}translate
+│✾ ${prefix}infogempa
+│✾ ${prefix}cuaca
+│✾ ${prefix}covidindo
+│✾ ${prefix}covidglobal
+╰─⬣
+
+╭─⬣「 𝗙𝗨𝗡 𝗠𝗘𝗡𝗨 」⬣
+│✾ ${prefix}suit
+│✾ ${prefix}beban
+│✾ ${prefix}babi
+│✾ ${prefix}ganteng
+│✾ ${prefix}cantik
+│✾ ${prefix}jadian
+│✾ ${prefix}kapankah
+│✾ ${prefix}bisakah
+│✾ ${prefix}cekwatak
+│✾ ${prefix}cekcantik
+│✾ ${prefix}cekganteng
+│✾ ${prefix}rate
+│✾ ${prefix}apakah
+│✾ ${prefix}slot
+│✾ ${prefix}faktaunik
+│✾ ${prefix}pantun
+│✾ ${prefix}dare
+│✾ ${prefix}truth
+╰─⬣
+
+╭─⬣「 𝗔𝗨𝗗𝗜𝗢 𝗠𝗘𝗡𝗨 」⬣
 │✾ ${prefix}bass *reply*
 │✾ ${prefix}slow *reply*
 │✾ ${prefix}fast *reply*
@@ -950,7 +1107,20 @@ menu =
 │✾ ${prefix}reverse *reply video*
 ╰─⬣
 
-╭─⬣「 𝗠𝗘𝗡𝗨 🔞 」⬣
+╭─⬣「 𝗡𝗘𝗞𝗢𝗣𝗢𝗜 𝗠𝗘𝗡𝗨 」⬣
+│✾ ${prefix}nekopoi1
+│✾ ${prefix}nekopoi2
+│✾ ${prefix}nekopoi3
+│✾ ${prefix}nekopoi4
+│✾ ${prefix}nekopoi5
+│✾ ${prefix}nekopoi6
+│✾ ${prefix}nekopoi7
+│✾ ${prefix}nekopoi8
+│✾ ${prefix}nekopoi8
+│✾ ${prefix}nekopoi9
+╰─⬣
+
+╭─⬣「 𝗡𝗦𝗙𝗪 𝗠𝗘𝗡𝗨 」⬣
 │✾ ${prefix}nsfw 1/0
 │✾ ${prefix}neko
 │✾ ${prefix}yuri
@@ -971,7 +1141,7 @@ menu =
 │✾ ${prefix}wallpaper
 ╰─⬣
 
-╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗦𝗢𝗡𝗜𝗗𝗢 」⬣
+╭─⬣「 𝗦𝗢𝗨𝗡𝗗 𝗠𝗘𝗡𝗨 」⬣
 │✾ ${prefix}sound1
 │✾ ${prefix}sound2
 │✾ ${prefix}sound3
@@ -991,16 +1161,41 @@ menu =
 │✾ ${prefix}sound17
 │✾ ${prefix}sound18
 ╰─⬣
+
+╭─⬣「 𝗔𝗦𝗨𝗣𝗔𝗡 𝗠𝗘𝗡𝗨 」⬣
+│✾ ${prefix}asupancecan
+│✾ ${prefix}asupanhijaber
+│✾ ${prefix}asupansantuy
+│✾ ${prefix}asupanukhti
+│✾ ${prefix}asupanbocil
+│✾ ${prefix}asupanghea
+│✾ ${prefix}asupanrika
+╰─⬣
+
+╭─⬣「 𝗖𝗘𝗖𝗔𝗡 𝗠𝗘𝗡𝗨 」⬣
+│✾ ${prefix}cecanvietnam
+│✾ ${prefix}cecanmalaysia
+│✾ ${prefix}cecankorea
+│✾ ${prefix}cecanindonesia
+│✾ ${prefix}cecanjapan
+│✾ ${prefix}cecanthailand
+│✾ ${prefix}cecanchina
+╰─⬣
+
+╭─⬣「 𝗧𝗛𝗔𝗡𝗞𝗦 𝗧𝗢 」⬣
+│✾ 𝗕𝗼𝘁 𝗗𝗵𝗮𝗻𝗶 ? 
+│✾ 𝗥𝘆𝘂𝘂𝗸𝗮 𝗕𝗼𝘁𝘇
+│✾ 𝗙𝗕𝗼𝘁𝘇
+│✾ 𝗭𝗲𝗲𝗼𝗻𝗲 𝗢𝗳𝗰
+│✾ 𝗟𝗲𝘅𝘅𝘆 𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹
+│✾ 𝗭𝗲𝗿𝗼𝗬𝗧𝟳
+╰─⬣「 𝙍𝙮𝙪𝘽𝙤𝙩𝙯 3.0.0 」⬣`
 teks =
-`Doge Bot | Hecho por monsterhd4k
-but = [
-          { buttonId: `${prefix}infobot`, buttonText: { displayText: '☰ INFO' }, type: 1 },
-          { buttonId: `${prefix}owner`, buttonText: { displayText: '☰ OWNER' }, type: 1 }
-        ]
-        sendButImage(from, menu, teks, fakeRyuu, but)
-man = fs.readFileSync('./assets/tabun.mp3');
-Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
+`RyuBotz 3.0.0 | Create By Ryuuka Botz
+${tampilTanggal}`
+but = [{buttonId: `${prefix}script`,buttonText: {displayText: `SCRIPT 💻`,},type: 1}, {buttonId: `${prefix}listmenu`,buttonText: {displayText: `LIST MENU 💌`,},type: 1,},]
+ sendButton(from, menu, teks, but, {quoted: ftrol})
+ break
 case 'donasi':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 menu =
@@ -1054,41 +1249,51 @@ break
 case 'textpromemenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 menu =
-`
-╭─⬣「 𝗠𝗘𝗡𝗨 𝗧𝗘𝗫𝗧𝗣𝗥𝗢𝗠𝗘 」⬣
-│✾ ${prefix}blackpink *texto*
-│✾ ${prefix}neon *texto*
-│✾ ${prefix}greenneon *texto*
-│✾ ${prefix}advanceglow *texto*
-│✾ ${prefix}futureneon *texto*
-│✾ ${prefix}sandwriting *texto*
-│✾ ${prefix}sandsummer *texto*
-│✾ ${prefix}sandengraved *texto*
-│✾ ${prefix}metaldark *texto*
-│✾ ${prefix}neonlight *texto*
-│✾ ${prefix}text1917 *texto*
-│✾ ${prefix}minion *texto*
-│✾ ${prefix}deluxesilver *texto*
-│✾ ${prefix}newyearcard *texto*
-│✾ ${prefix}bloodfrosted *texto*
-│✾ ${prefix}halloween *texto*
-│✾ ${prefix}jokerlogo *texto*
-│✾ ${prefix}fireworksparkle *texto*
-│✾ ${prefix}natureleaves *texto*
-│✾ ${prefix}bokeh *texto*
-│✾ ${prefix}strawberry *texto*
-│✾ ${prefix}box3d *texto*
-│✾ ${prefix}roadwarning *texto*
-│✾ ${prefix}breakwall *texto*
-│✾ ${prefix}icecold *texto*
-│✾ ${prefix}luxury *texto*
-│✾ ${prefix}cloud *texto*
-│✾ ${prefix}summersand *texto*
-│✾ ${prefix}horrorblood *texto*
+`*Hai @${sender.split('@')[0]} ${jams}*
+
+𝙟𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙗𝙖𝙝𝙖𝙜𝙞𝙖🍵
+
+╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
+│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜ ${prefix} ⌟
+│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
+│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
+│✾ 𝙍𝙪𝙣 : ${runtime(process.uptime())}
+│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+╰─⬣
+
+╭─⬣「 𝗧𝗘𝗫𝗧𝗣𝗥𝗢𝗠𝗘 𝗠𝗘𝗡𝗨 」⬣
+│✾ ${prefix}blackpink *teks*
+│✾ ${prefix}neon *teks*
+│✾ ${prefix}greenneon *teks*
+│✾ ${prefix}advanceglow *teks*
+│✾ ${prefix}futureneon *teks*
+│✾ ${prefix}sandwriting *teks*
+│✾ ${prefix}sandsummer *teks*
+│✾ ${prefix}sandengraved *teks*
+│✾ ${prefix}metaldark *teks*
+│✾ ${prefix}neonlight *teks*
+│✾ ${prefix}text1917 *teks*
+│✾ ${prefix}minion *teks*
+│✾ ${prefix}deluxesilver *teks*
+│✾ ${prefix}newyearcard *teks*
+│✾ ${prefix}bloodfrosted *teks*
+│✾ ${prefix}halloween *teks*
+│✾ ${prefix}jokerlogo *teks*
+│✾ ${prefix}fireworksparkle *teks*
+│✾ ${prefix}natureleaves *teks*
+│✾ ${prefix}bokeh *teks*
+│✾ ${prefix}strawberry *teks*
+│✾ ${prefix}box3d *teks*
+│✾ ${prefix}roadwarning *teks*
+│✾ ${prefix}breakwall *teks*
+│✾ ${prefix}icecold *teks*
+│✾ ${prefix}luxury *teks*
+│✾ ${prefix}cloud *teks*
+│✾ ${prefix}summersand *teks*
+│✾ ${prefix}horrorblood *teks*
 ╰─⬣`
 teks =
-`Doge Bot | Hecho por monsterhd4k
-${tampilTanggal}`
+`RyuBotz 3.0.0 | Create By Ryuuka Botz
 Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
