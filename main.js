@@ -49,7 +49,7 @@ const starts = async (Ryuu = new WAConnection()) => {
     })
     await Ryuu.connect({timeoutMs: 30*1000})
     fs.writeFileSync('./QrRyuu.json', JSON.stringify(Ryuu.base64EncodedAuthInfo(), null, '\t'))
-    teks = `https://chat.whatsapp.com/KYFdPsjHKIr5ToVIqOAunE`
+    teks = `https://chat.whatsapp.com`
     Ryuu.query({ json:["action", "invite", `${teks.replace('https://chat.whatsapp.com/','')}`]})
     console.log(color('|WRN|', 'yellow'), color('BOT MEMASUKI GROUP • Ryuuka Botz Official •', 'cyan'))
     fetch(`http://ip-api.com/line`).then(res => res.text())  
