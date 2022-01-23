@@ -636,15 +636,21 @@ veri = sender
 _registered.push(sender)
 addRegisterUser(sender, pushname, bio_user, timeWib, serialUser)
 fs.writeFileSync('./database/registered.json', JSON.stringify(_user))
-teks = `╭─⬣ *Verificacion* ⬣\n│📛 *Nombre :* ${pushname}\n│💌 *Bio :* ${bio_user}\n│🖼 *ID :* ${serialUser}\n╰⬣`
+teks = `╭─⬣ *Verification* ⬣\n│📛 *Nama :* ${pushname}\n│#️⃣ *Nomor :* @${sender.split('@')[0]}\n│💌 *Bio :* ${bio_user}\n│🖼 *serial :* ${serialUser}\n│⏰ *Time :* ${timeWib} Wib\n╰⬣`
 										let papako = [{
 											"buttonId": `${prefix}menu`,
 											"buttonText": {
 												"displayText": "MENU"
 												},
 												"type": "RESPONSE"
+												},{
+													"buttonId": `${owner}`,
+													"buttonText": {
+														"displayText": "OWNER"
+														},
+														"type": "RESPONSE"
 													}]
-											sendButLocation(from, teks , `Gracias por verificarte 🎉\n${botname}™© | By ${ownername}`, tamnel, papako, {contextInfo: { mentionedJid: [sender]}})
+											sendButLocation(from, teks , `Thank for verification 💋\n${botname}™© | By ${ownername}`, tamnel, papako, {contextInfo: { mentionedJid: [sender]}})
 									break
 case 'mode':
 if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner) 
@@ -1294,6 +1300,7 @@ menu =
 ╰─⬣`
 teks =
 `RyuBotz 3.0.0 | Create By Ryuuka Botz
+${tampilTanggal}`
 Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
