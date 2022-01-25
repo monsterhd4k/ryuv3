@@ -3780,7 +3780,7 @@ break
 										.then(async (a) => {
 											me = `*Link* : ${a.data}`
 											noweem = await getBuffer(nowm)
-											Ryuu.sendMessage(from,noweem , MessageType.document, {mimetype: 'video/mp4',filename: `Tiktok Download.mp4`,quoted:mek})
+											Ryuu.sendMessage(from,noweem , MessageType.video, {mimetype: 'video/mp4',filename: `Tiktok Video.mp4`,quoted:mek})
 											})
 										}).catch((err) => reply(`Link tidak valid`))
 									break 
