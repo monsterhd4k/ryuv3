@@ -266,9 +266,9 @@ options
 );
 };
 
-const daftar1 = `*Hai kak  ${pushname} 👋*\n\n*Sebelum Mengakses Bot Silahkan Daftar Terlebih Dahulu Ya*`
-const daftar2 = '```Ketik #daftar Atau Klik Tombol Di Bawah Untuk Verify Kak```'
-const daftar3 = [{buttonId: `${prefix}verify`,buttonText: {displayText: `🥀 VERIFY 🥀 `,},type: 1,},]
+const daftar1 = `Hola👋🏻 *"${pushname}" *\n\n*Verifiquese antes de usar el bot*`
+const daftar2 = '```Escriba #daftar o presione el boton para verificarse```'
+const daftar3 = [{buttonId: `${prefix}verify`,buttonText: {displayText: `🔓 VERIFICARSE 🔓`,},type: 1,},]
 
 const sendButPrem = (id, text1, desc1, but = [], options = {}) => {
 const buttonMessage = {
@@ -636,7 +636,7 @@ veri = sender
 _registered.push(sender)
 addRegisterUser(sender, pushname, bio_user, timeWib, serialUser)
 fs.writeFileSync('./database/registered.json', JSON.stringify(_user))
-teks = `╭─⬣ *Verification* ⬣\n│📛 *Nama :* ${pushname}\n│#️⃣ *Nomor :* @${sender.split('@')[0]}\n│💌 *Bio :* ${bio_user}\n│🖼 *serial :* ${serialUser}\n│⏰ *Time :* ${timeWib} Wib\n╰⬣`
+teks = `╭─⬣ *Verificacion* ⬣\n│📛 *Nombre:* ${pushname}\n│💌 *Bio:* ${bio_user}\n│🖼 *ID:* ${serialUser}\n╰⬣`
 										let papako = [{
 											"buttonId": `${prefix}menu`,
 											"buttonText": {
@@ -650,7 +650,7 @@ teks = `╭─⬣ *Verification* ⬣\n│📛 *Nama :* ${pushname}\n│#️⃣ *
 														},
 														"type": "RESPONSE"
 													}]
-											sendButLocation(from, teks , `Thank for verification 💋\n${botname}™© | By ${ownername}`, tamnel, papako, {contextInfo: { mentionedJid: [sender]}})
+											sendButLocation(from, teks , `Gracias por verificarte 🎉\n${botname}™© | By ${ownername}`, tamnel, papako, {contextInfo: { mentionedJid: [sender]}})
 									break
 case 'mode':
 if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner) 
@@ -684,145 +684,82 @@ case 'self':
 	  stst = stst.status == 401 ? '' : stst.status
             const modde = public ? 'PUBLIC': 'SELF'
             listMsg = {
-            buttonText: 'MENU DISINI 💻',
+            buttonText: 'MENU DE LISTA 📋',
             footerText: fake,
-            description: `*Hai Kak* @${sender.split('@')[0]} ${jams}
+            description: `Hola 👋🏻 @${sender.split('@')[0]} !
 
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥 」⬣
-│✾ 𝙉𝙖𝙢𝙚 : ${pushname}
-│✾ 𝙏𝙖𝙜𝙨 : @${sender.split("@")[0]}
-│✾ 𝙎𝙩𝙖𝙩𝙪𝙨 : ${isOwner? "Owner️":"User"}
+╭─⬣「 𝗜𝗡𝗙𝗢 𝗗𝗘𝗟 𝗨𝗦𝗨𝗔𝗥𝗜𝗢 」⬣
+│ • 𝙉𝙤𝙢𝙗𝙧𝙚 : ${pushname}
+│ • 𝙀𝙨𝙩𝙖𝙙𝙤 : ${isOwner? "Owner️":"Usuario"}
 ╰─⬣
 
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
-│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜ ${prefix} ⌟
-│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
-│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
-│✾ 𝙈𝙤𝙙𝙚 : ${modde}
-│✾ 𝙍𝙪𝙣 : ${runtime(process.uptime())}
-│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+╭─⬣「 𝗜𝗡𝗙𝗢 𝗗𝗘𝗟 𝗕𝗢𝗧 」⬣
+│ • 𝙋𝙧𝙚𝙛𝙞𝙟𝙤 𝙙𝙚𝙡 𝘽𝙤𝙩: ⌜ . ⌟
+│ • 𝙉𝙤𝙢𝙗𝙧𝙚 𝙙𝙚𝙡 𝘽𝙤𝙩: ${botname}
+│ • 𝙉𝙤𝙢𝙗𝙧𝙚 𝙙𝙚𝙡 𝙊𝙬𝙣𝙚𝙧: ${ownername}
+│ • 𝙈𝙤𝙙𝙤: ${modde}
+│ • 𝙏𝙞𝙚𝙢𝙥𝙤 𝙖𝙘𝙩𝙞𝙫𝙤: ${runtime(process.uptime())}
+│ • 𝙇𝙞𝙗: 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
 ╰─⬣
 
-╭─⬣「 𝗜𝗡𝗗𝗢𝗡𝗘𝗦𝗜𝗔 𝗧𝗜𝗠𝗘 」⬣
-│✾ 𝙒𝙞𝙗 : ${timeWib}
-│✾ 𝙒𝙞𝙩𝙖 : ${timeWita}
-│✾ 𝙒𝙞𝙩 : ${timeWit}  
-╰─⬣
-
-𝙋𝙚𝙣𝙘𝙚𝙩 𝘽𝙪𝙩𝙩𝙤𝙣 𝘿𝙞 𝘽𝙖𝙬𝙖𝙝 𝙄𝙣𝙞 𝙐𝙣𝙩𝙪𝙠 𝙈𝙚𝙢𝙞𝙡𝙞𝙝 𝙈𝙚𝙣𝙪`, 
+𝙋𝙧𝙚𝙨𝙞𝙤𝙣𝙚 𝙚𝙡 𝙗𝙤𝙩𝙤𝙣 𝙙𝙚 𝙖𝙗𝙖𝙟𝙤 𝙥𝙖𝙧𝙖 𝙨𝙚𝙡𝙚𝙘𝙘𝙞𝙤𝙣𝙖𝙧 𝙚𝙡 𝙢𝙚𝙣𝙪`,
             sections: [
             {
-            "title": `Silahkan Dipilih Kak ${pushname} 🤗`,
             rows: [
             {
-              "title": "ALL MENU [🕊️]",
+              "title": "MENU COMPLETO [💯]",
               "rowId": `${prefix}allmenu`,
-              "description": `Menampilkan Seluruh Menu ${botname}`
+              "description": `Mostrar el menu completo ${botname}`
             },
             {
-              "title": "STORE MENU [💎]",
-              "rowId": `${prefix}storemenu`, 
-              "description": `Menampilkan Seluruh Store ${botname}`
-            },
-            {
-              "title": "SOUND MENU [💿]",
+              "title": "MENU DE SONIDOS [💿]",
               "rowId": `${prefix}soundmenu`, 
-              "description": `Menampilkan Seluruh Sound ${botname}`
+              "description": `Mostrar menu de Sonidos ${botname}`
             },
             {
-              "title": "AUDIOMENU [🎙]",
+              "title": "MENU DE AUDIO [🎙]",
               "rowId": `${prefix}audiomenu`, 
-              "description": `Menampilkan Seluruh Audio ${botname}`
+              "description": `Mostrar menu de Audio ${botname}`
             },
             {
-              "title": "NEKOPOI MENU [🎞]",
-              "rowId": `${prefix}nekopoimenu`, 
-              "description": `Menampilkan Seluruh Nekopoi ${botname}`
-            },
-            {
-              "title": "GROUP MENU [👨]‍‍",
+              "title": "MENU DE GRUPO [🏠]‍‍",
               "rowId": `${prefix}grupmenu`, 
-              "description": `Menampilkan Seluruh Group ${botname}`
+              "description": `Mostrar menu de Grupo ${botname}`
             },
             {
-              "title": "OWNER MENU [👤]",
+              "title": "MENU DE OWNER [👤]",
               "rowId": `${prefix}ownermenu`, 
-              "description": `Menampilkan Seluruh Owner ${botname}`
+              "description": `Mostrar menu de Owner ${botname}`
             },
             {
-              "title": "‍NSFW MENU [🔞]",
+              "title": "‍MENU NSFW [🔞]",
               "rowId": `${prefix}nsfwmenu`, 
-              "description": `Menampilkan Seluruh Nsfw ${botname}`
+              "description": `Mostrar menu NSFW ${botname}`
             },
             {
-              "title": "‍ISLAMI MENU [🕋]",
-              "rowId": `${prefix}islamimenu`, 
-              "description": `Menampilkan Seluruh Islami ${botname}`
-            },
-            {
-              "title": "‍TEXTPROME MENU [⌨️]",
+              "title": "‍MENU DE TEXTPROME [⌨️]",
               "rowId": `${prefix}textpromemenu`, 
-              "description": `Menampilkan Seluruh Textprome ${botname}`
+              "description": `Menu de creacion de imagenes con textos ${botname}`
             },
             {
-              "title": "‍POTOOXY MENU [📸️]",
+              "title": "‍MENU DE POTOOXY [📸️]",
               "rowId": `${prefix}potooxymenu`, 
-              "description": `Menampilkan Seluruh Potooxy ${botname}`
+              "description": `Menu de creacion de imagenes con textos ${botname}`
             },
             {
-              "title": "‍EPHOTO MENU [✉️️]",
+              "title": "‍MENU DE EPHOTO [✉️️]",
               "rowId": `${prefix}ephotomenu`, 
-              "description": `Menampilkan Seluruh Ephoto 360 ${botname}`
+              "description": `Menu de creacion de imagenes con textos ${botname}`
             },
             {
-              "title": "‍WAR MENU [️💀]",
-              "rowId": `${prefix}warmenu`, 
-              "description": `Menampilkan Seluruh War ${botname}`
-            },
-            {
-              "title": "‍ANIME MENU [💕️]",
+              "title": "‍ANIME MENU [🦄]",
               "rowId": `${prefix}animemenu`, 
-              "description": `Menampilkan Seluruh Anime ${botname}`
+              "description": `Mostrar menu de Anime ${botname}`
             },
             {
-              "title": "‍ASUPAN MENU [👩‍🦰]",
-              "rowId": `${prefix}asupanmenu`, 
-              "description": `Menampilkan Seluruh Asupan ${botname}`
-            },
-            {
-              "title": "‍CECAN MENU [👯]",
-              "rowId": `${prefix}cecanmenu`, 
-              "description": `Menampilkan Seluruh Cecan ${botname}`
-            },
-            {
-              "title": "FUN MENU [🚲]",
-              "rowId": `${prefix}funmenu`, 
-              "description": `Menampilkan Seluruh Fun ${botname}`
-            },
-            {
-              "title": "DOWNLOAD MENU [💾]",
+              "title": "MENU DE DESCARGAS [💾]",
               "rowId": `${prefix}downloadmenu`, 
-              "description": `Menampilkan Seluruh Download ${botname}`
-            },
-            {
-              "title": "DONASI [🎁]",
-              "rowId": `${prefix}donasi`, 
-              "description": `Menampilkan Donasi ${botname}`
-            },
-            {
-              "title": "SOURCE CODE [💻]",
-              "rowId": `${prefix}sc`, 
-              "description": `Menampilkan Script Bot RyuBotz`
-            },
-            {
-              "title": "BIG THANKS TO [🏆]",
-              "rowId": `${prefix}tqto`, 
-              "description": `Menampilkan Thanks ${botname}`
-            },
-            {
-              "title": "RULES [📚]",
-              "rowId": `${prefix}rules`, 
-              "description": `Menampilkan Rules Pengguna Bot ${botname}`
+              "description": `Mostrar menu de Descargas ${botname}`
             }
             ]
             }],
@@ -834,370 +771,234 @@ case 'allmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 const modee = public ? 'PUBLIC': 'SELF'
 menu =
-`*Hai @${sender.split('@')[0]} ${jams}*
+`Hola 👋🏻 @${sender.split('@')[0]} !
 
-𝙟𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙗𝙖𝙝𝙖𝙜𝙞𝙖🍵
-
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥 」⬣
-│✾ 𝙉𝙖𝙢𝙚 : ${pushname}
-│✾ 𝙏𝙖𝙜𝙨 : @${sender.split("@")[0]}
-│✾ 𝙎𝙩𝙖𝙩𝙪𝙨 : ${isOwner? "Owner️":"User"}
+╭─⬣「 𝗠𝗘𝗡𝗨 𝗩𝗔𝗥𝗜𝗔𝗗𝗢 」⬣
+│ • ${prefix}report
+│ • ${prefix}rules
+│ • ${prefix}ping / speed
+│ • ${prefix}donasi
+│ • ${prefix}info
+│ • ${prefix}daftar
 ╰─⬣
 
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
-│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜ ${prefix} ⌟
-│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
-│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
-│✾ 𝙈𝙤𝙙𝙚 : ${modee}
-│✾ 𝙍𝙪𝙣 : ${runtime(process.uptime())}
-│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗢𝗪𝗡𝗘𝗥 」⬣
+│ • ${prefix}owner
+│ • ${prefix}bc *texto*
+│ • ${prefix}setbiobot *texto*
+│ • ${prefix}setnamabot *texto*
+│ • ${prefix}delete
+│ • ${prefix}public
+│ • ${prefix}self
 ╰─⬣
 
-╭─⬣「 𝗧𝗢 𝗗𝗔𝗬 」⬣
-│✾ 𝙐𝙘𝙖𝙥𝙖𝙣 : ${jams}
-│✾ 𝘽𝙪𝙡𝙖𝙣 : ${bulan}
-│✾ 𝙃𝙖𝙧𝙞 : ${hari}
-│✾ 𝙏𝙂𝙇 : ${tanggal}
+╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗚𝗥𝗨𝗣𝗢 」⬣
+│ • ${prefix}antiEnlace *on / off*
+│ • ${prefix}antivirtex *on / off*
+│ • ${prefix}welcome *on / off*
+│ • ${prefix}group *buka / tutup*
+│ • ${prefix}promote *@tag / reply*
+│ • ${prefix}demote *@tag / reply*
+│ • ${prefix}add *628xx*
+│ • ${prefix}kick *@tag / reply*
+│ • ${prefix}setpp *reply / cap*
+│ • ${prefix}setdesc *texto*
+│ • ${prefix}setname *texto*
+│ • ${prefix}hidetag *texto*
+│ • ${prefix}Enlacegrup
+│ • ${prefix}infogrup
+│ • ${prefix}listonline
+│ • ${prefix}resetEnlacegrup
 ╰─⬣
 
-╭─⬣「 𝗜𝗡𝗗𝗢𝗡𝗘𝗦𝗜𝗔 𝗧𝗜𝗠𝗘 」⬣
-│✾ 𝙒𝙞𝙗 : ${timeWib}
-│✾ 𝙒𝙞𝙩𝙖 : ${timeWita}
-│✾ 𝙒𝙞𝙩 : ${timeWit}  
+╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗗𝗘𝗦𝗖𝗔𝗥𝗚𝗔𝗦 」⬣
+│ • ${prefix}ytmp3 *Enlace*
+│ • ${prefix}ytmp4 *Enlace*
+│ • ${prefix}playstore *search*
+│ • ${prefix}pinterest *search*
+│ • ${prefix}tiktok / tiktoknowm *Enlace*
+│ • ${prefix}tiktokwm *Enlace*
+│ • ${prefix}mediafire *Enlace*
+│ • ${prefix}google *search*
+│ • ${prefix}wiki *search*
+│ • ${prefix}yts *search*
+│ • ${prefix}play *Texto*
+│ • ${prefix}lirik *search*
+│ • ${prefix}spotify *Enlace*
+│ • ${prefix}spotifysearch *search*
+│ • ${prefix}jooxplay *Texto*
 ╰─⬣
 
-╭─⬣「 𝗢𝗧𝗛𝗘𝗥 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}report
-│✾ ${prefix}rules
-│✾ ${prefix}ping / speed
-│✾ ${prefix}donasi
-│✾ ${prefix}info
-│✾ ${prefix}daftar
+╭─⬣「 𝗠𝗘𝗡𝗨 𝗘𝗣𝗛𝗢𝗧𝗢 𝟯𝟲𝟬 」⬣
+│ • ${prefix}wetglass *texto*
+│ • ${prefix}multicolor3d *texto*
+│ • ${prefix}watercolor *texto*
+│ • ${prefix}luxurygold *texto*
+│ • ${prefix}galaxywallpaper *texto*
+│ • ${prefix}lighttext *texto*
+│ • ${prefix}beautifulflower *texto*
+│ • ${prefix}puppycute *texto*
+│ • ${prefix}royaltext *texto*
+│ • ${prefix}heartshaped *texto*
+│ • ${prefix}birthdaycake *texto*
+│ • ${prefix}galaxystyle *texto*
+│ • ${prefix}hologram3d *texto*
+│ • ${prefix}greenneon *texto*
+│ • ${prefix}glossychrome *texto*
+│ • ${prefix}greenbush *texto*
+│ • ${prefix}metallogo *texto*
+│ • ${prefix}noeltext *texto*
+│ • ${prefix}glittergold *texto*
+│ • ${prefix}textcake *texto*
+│ • ${prefix}starsnight *texto*
+│ • ${prefix}wooden3d *texto*
+│ • ${prefix}textbyname *texto*
+│ • ${prefix}writegalacy *texto*
+│ • ${prefix}galaxybat *texto*
+│ • ${prefix}snow3d *texto*
+│ • ${prefix}birthdayday *texto*
+│ • ${prefix}goldplaybutton *texto*
+│ • ${prefix}silverplaybutton *texto*
 ╰─⬣
 
-╭─⬣「 𝗢𝗪𝗡𝗘𝗥 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}owner
-│✾ ${prefix}bc *Teks*
-│✾ ${prefix}setbiobot *teks*
-│✾ ${prefix}setnamabot *teks*
-│✾ ${prefix}delete
-│✾ ${prefix}public
-│✾ ${prefix}self
-╰─⬣
-
-╭─⬣「 𝗪𝗔𝗥 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}virtex1
-│✾ ${prefix}virtex2
-│✾ ${prefix}virtex3
-│✾ ${prefix}virtex4
-│✾ ${prefix}virtex5
-│✾ ${prefix}virtex6
-│✾ ${prefix}virtex7
-│✾ ${prefix}virtex8
-│✾ ${prefix}virtag
-│✾ ${prefix}emoji
-│✾ ${prefix}ngazab
-╰─⬣
-
-╭─⬣「 𝗚𝗥𝗨𝗣 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}antilink *on / off*
-│✾ ${prefix}antivirtex *on / off*
-│✾ ${prefix}welcome *on / off*
-│✾ ${prefix}group *buka / tutup*
-│✾ ${prefix}promote *@tag / reply*
-│✾ ${prefix}demote *@tag / reply*
-│✾ ${prefix}add *628xx*
-│✾ ${prefix}kick *@tag / reply*
-│✾ ${prefix}setpp *reply / cap*
-│✾ ${prefix}setdesc *teks*
-│✾ ${prefix}setname *teks*
-│✾ ${prefix}hidetag *teks*
-│✾ ${prefix}linkgrup
-│✾ ${prefix}infogrup
-│✾ ${prefix}listonline
-│✾ ${prefix}resetlinkgrup
-╰─⬣
-
-╭─⬣「 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}ytmp3 *Link*
-│✾ ${prefix}ytmp4 *Link*
-│✾ ${prefix}playstore *search*
-│✾ ${prefix}pinterest *search*
-│✾ ${prefix}tiktok / tiktoknowm *link*
-│✾ ${prefix}tiktokwm *link*
-│✾ ${prefix}mediafire *link*
-│✾ ${prefix}google *search*
-│✾ ${prefix}wiki *search*
-│✾ ${prefix}yts *search*
-│✾ ${prefix}play *teks*
-│✾ ${prefix}lirik *search*
-│✾ ${prefix}spotify *link*
-│✾ ${prefix}spotifysearch *search*
-│✾ ${prefix}jooxplay *teks*
-╰─⬣
-
-╭─⬣「 𝗘𝗣𝗛𝗢𝗧𝗢 𝟯𝟲𝟬 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}wetglass *teks*
-│✾ ${prefix}multicolor3d *teks*
-│✾ ${prefix}watercolor *teks*
-│✾ ${prefix}luxurygold *teks*
-│✾ ${prefix}galaxywallpaper *teks*
-│✾ ${prefix}lighttext *teks*
-│✾ ${prefix}beautifulflower *teks*
-│✾ ${prefix}puppycute *teks*
-│✾ ${prefix}royaltext *teks*
-│✾ ${prefix}heartshaped *teks*
-│✾ ${prefix}birthdaycake *teks*
-│✾ ${prefix}galaxystyle *teks*
-│✾ ${prefix}hologram3d *teks*
-│✾ ${prefix}greenneon *teks*
-│✾ ${prefix}glossychrome *teks*
-│✾ ${prefix}greenbush *teks*
-│✾ ${prefix}metallogo *teks*
-│✾ ${prefix}noeltext *teks*
-│✾ ${prefix}glittergold *teks*
-│✾ ${prefix}textcake *teks*
-│✾ ${prefix}starsnight *teks*
-│✾ ${prefix}wooden3d *teks*
-│✾ ${prefix}textbyname *teks*
-│✾ ${prefix}writegalacy *teks*
-│✾ ${prefix}galaxybat *teks*
-│✾ ${prefix}snow3d *teks*
-│✾ ${prefix}birthdayday *teks*
-│✾ ${prefix}goldplaybutton *teks*
-│✾ ${prefix}silverplaybutton *teks*
-╰─⬣
-
-╭─⬣「 𝗣𝗢𝗧𝗢𝗢𝗫𝗬 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}shadow *teks*
-│✾ ${prefix}cup *teks*
-│✾ ${prefix}cup1 *teks*
-│✾ ${prefix}romance *teks*
-│✾ ${prefix}smoke *teks*
-│✾ ${prefix}burnpaper *teks*
-│✾ ${prefix}lovemessage *teks*
-│✾ ${prefix}undergrass *teks*
-│✾ ${prefix}love *teks*
-│✾ ${prefix}coffe *teks*
-│✾ ${prefix}woodheart *teks*
-│✾ ${prefix}woodenboard *teks*
-│✾ ${prefix}summer3d *teks*
-│✾ ${prefix}wolfmetal *teks*
-│✾ ${prefix}nature3d *teks*
-│✾ ${prefix}underwater *teks*
-│✾ ${prefix}golderrose *teks*
-│✾ ${prefix}summernature *teks*
-│✾ ${prefix}letterleaves *teks*
-│✾ ${prefix}glowingneon *teks*
-│✾ ${prefix}fallleaves *teks*
-│✾ ${prefix}flamming *teks*
-│✾ ${prefix}harrypotter *teks*
-│✾ ${prefix}carvedwood *teks*
-│✾ ${prefix}arcade8bit *text1 text2*
-│✾ ${prefix}battlefield4 *text1 text2*
+╭─⬣「 𝗠𝗘𝗡𝗨 𝗣𝗢𝗧𝗢𝗢𝗫𝗬 」⬣
+│ • ${prefix}shadow *texto*
+│ • ${prefix}cup *texto*
+│ • ${prefix}cup1 *texto*
+│ • ${prefix}romance *texto*
+│ • ${prefix}smoke *texto*
+│ • ${prefix}burnpaper *texto*
+│ • ${prefix}lovemessage *texto*
+│ • ${prefix}undergrass *texto*
+│ • ${prefix}love *texto*
+│ • ${prefix}coffe *texto*
+│ • ${prefix}woodheart *texto*
+│ • ${prefix}woodenboard *texto*
+│ • ${prefix}summer3d *texto*
+│ • ${prefix}wolfmetal *texto*
+│ • ${prefix}nature3d *texto*
+│ • ${prefix}underwater *texto*
+│ • ${prefix}golderrose *texto*
+│ • ${prefix}summernature *texto*
+│ • ${prefix}letterleaves *texto*
+│ • ${prefix}glowingneon *texto*
+│ • ${prefix}fallleaves *texto*
+│ • ${prefix}flamming *texto*
+│ • ${prefix}harrypotter *texto*
+│ • ${prefix}carvedwood *texto*
+│ • ${prefix}arcade8bit *texto1 texto2*
+│ • ${prefix}battlefield4 *texto1 texto2*
 ╰─⬣
  
-╭─⬣「 𝗧𝗘𝗫𝗧𝗣𝗥𝗢𝗠𝗘 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}blackpink *teks*
-│✾ ${prefix}neon *teks*
-│✾ ${prefix}greenneon *teks*
-│✾ ${prefix}advanceglow *teks*
-│✾ ${prefix}futureneon *teks*
-│✾ ${prefix}sandwriting *teks*
-│✾ ${prefix}sandsummer *teks*
-│✾ ${prefix}sandengraved *teks*
-│✾ ${prefix}metaldark *teks*
-│✾ ${prefix}neonlight *teks*
-│✾ ${prefix}text1917 *teks*
-│✾ ${prefix}minion *teks*
-│✾ ${prefix}deluxesilver *teks*
-│✾ ${prefix}newyearcard *teks*
-│✾ ${prefix}bloodfrosted *teks*
-│✾ ${prefix}halloween *teks*
-│✾ ${prefix}jokerlogo *teks*
-│✾ ${prefix}fireworksparkle *teks*
-│✾ ${prefix}natureleaves *teks*
-│✾ ${prefix}bokeh *teks*
-│✾ ${prefix}strawberry *teks*
-│✾ ${prefix}box3d *teks*
-│✾ ${prefix}roadwarning *teks*
-│✾ ${prefix}breakwall *teks*
-│✾ ${prefix}icecold *teks*
-│✾ ${prefix}luxury *teks*
-│✾ ${prefix}cloud *teks*
-│✾ ${prefix}summersand *teks*
-│✾ ${prefix}horrorblood *teks*
+╭─⬣「 𝗠𝗘𝗡𝗨 𝗧𝗘𝗫𝗧𝗣𝗥𝗢𝗠𝗘 」⬣
+│ • ${prefix}blackpink *texto*
+│ • ${prefix}neon *texto*
+│ • ${prefix}greenneon *texto*
+│ • ${prefix}advanceglow *texto*
+│ • ${prefix}futureneon *texto*
+│ • ${prefix}sandwriting *texto*
+│ • ${prefix}sandsummer *texto*
+│ • ${prefix}sandengraved *texto*
+│ • ${prefix}metaldark *texto*
+│ • ${prefix}neonlight *texto*
+│ • ${prefix}text1917 *texto*
+│ • ${prefix}minion *texto*
+│ • ${prefix}deluxesilver *texto*
+│ • ${prefix}newyearcard *texto*
+│ • ${prefix}bloodfrosted *texto*
+│ • ${prefix}halloween *texto*
+│ • ${prefix}jokerlogo *texto*
+│ • ${prefix}fireworksparkle *texto*
+│ • ${prefix}natureleaves *texto*
+│ • ${prefix}bokeh *texto*
+│ • ${prefix}strawberry *texto*
+│ • ${prefix}box3d *texto*
+│ • ${prefix}roadwarning *texto*
+│ • ${prefix}breakwall *texto*
+│ • ${prefix}icecold *texto*
+│ • ${prefix}luxury *texto*
+│ • ${prefix}cloud *texto*
+│ • ${prefix}summersand *texto*
+│ • ${prefix}horrorblood *texto*
 ╰─⬣
 
-╭─⬣「 𝗔𝗡𝗜𝗡𝗘 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}manga *search*
-│✾ ${prefix}anime *search*
-│✾ ${prefix}character *search*
-│✾ ${prefix}kusonime *link*
-│✾ ${prefix}kusonimesearch *search*
-│✾ ${prefix}otakudesu *link*
-│✾ ${prefix}otakudesusearch *search*
-│✾ ${prefix}nhentaipdf *kode*
-│✾ ${prefix}nhentaisearch *search*
-│✾ ${prefix}nekopoi *link*
-│✾ ${prefix}nekopoisearch *search*
+╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗔𝗡𝗜𝗠𝗘 」⬣
+│ • ${prefix}manga *search*
+│ • ${prefix}anime *search*
+│ • ${prefix}character *search*
+│ • ${prefix}kusonime *Enlace*
+│ • ${prefix}kusonimesearch *search*
+│ • ${prefix}otakudesu *Enlace*
+│ • ${prefix}otakudesusearch *search*
+│ • ${prefix}nhentaipdf *kode*
+│ • ${prefix}nhentaisearch *search*
+│ • ${prefix}nekopoi *Enlace*
+│ • ${prefix}nekopoisearch *search*
 ╰─⬣
 
-╭─⬣「 𝗦𝗧𝗜𝗖𝗞𝗘𝗥 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}sticker *reply / cap*
-│✾ ${prefix}toimg *reply*
-│✾ ${prefix}ttp
-│✾ ${prefix}attp
+╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗦𝗧𝗜𝗖𝗞𝗘𝗥 」⬣
+│ • ${prefix}sticker *reply / cap*
+│ • ${prefix}toimg *reply*
+│ • ${prefix}ttp
+│ • ${prefix}attp
 ╰─⬣
 
-╭─⬣「 𝗦𝗧𝗢𝗥𝗘 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}allpayment
-│✾ ${prefix}freefire
-│✾ ${prefix}mobilelegend
-│✾ ${prefix}sosis
-│✾ ${prefix}format
-│✾ ${prefix}salin
-│✾ ${prefix}lol
-│✾ ${prefix}aov
-│✾ ${prefix}cod
-│✾ ${prefix}valorant
-│✾ ${prefix}sewabot
+╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗖𝗜𝗢𝗡 」⬣
+│ • ${prefix}wikipedia
+│ • ${prefix}translate
 ╰─⬣
 
-╭─⬣「 𝗜𝗦𝗟𝗔𝗠𝗜 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}alquran
-│✾ ${prefix}alquranaudio
-│✾ ${prefix}kisahnabi
-│✾ ${prefix}asmaulhusna
-│✾ ${prefix}jadwalsholat
-│✾ ${prefix}listsurah
+╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗔𝗨𝗗𝗜𝗢 」⬣
+│ • ${prefix}bass *reply*
+│ • ${prefix}slow *reply*
+│ • ${prefix}fast *reply*
+│ • ${prefix}robot *reply*
+│ • ${prefix}reverse *reply video*
 ╰─⬣
 
-╭─⬣「 𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗦𝗜 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}kbbi
-│✾ ${prefix}jarak
-│✾ ${prefix}wikipedia
-│✾ ${prefix}translate
-│✾ ${prefix}infogempa
-│✾ ${prefix}cuaca
-│✾ ${prefix}covidindo
-│✾ ${prefix}covidglobal
+╭─⬣「 𝗠𝗘𝗡𝗨 🔞 」⬣
+│ • ${prefix}nsfw 1/0
+│ • ${prefix}neko
+│ • ${prefix}yuri
+│ • ${prefix}anal
+│ • ${prefix}pussy
+│ • ${prefix}baka
+│ • ${prefix}kiss
+│ • ${prefix}holo
+│ • ${prefix}hentai2
+│ • ${prefix}blowjob
+│ • ${prefix}megumin
+│ • ${prefix}trapnime
+│ • ${prefix}waifu
+│ • ${prefix}awoo
+│ • ${prefix}ero
+│ • ${prefix}hentai
+│ • ${prefix}boobs
+│ • ${prefix}wallpaper
 ╰─⬣
 
-╭─⬣「 𝗙𝗨𝗡 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}suit
-│✾ ${prefix}beban
-│✾ ${prefix}babi
-│✾ ${prefix}ganteng
-│✾ ${prefix}cantik
-│✾ ${prefix}jadian
-│✾ ${prefix}kapankah
-│✾ ${prefix}bisakah
-│✾ ${prefix}cekwatak
-│✾ ${prefix}cekcantik
-│✾ ${prefix}cekganteng
-│✾ ${prefix}rate
-│✾ ${prefix}apakah
-│✾ ${prefix}slot
-│✾ ${prefix}faktaunik
-│✾ ${prefix}pantun
-│✾ ${prefix}dare
-│✾ ${prefix}truth
+╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗦𝗢𝗡𝗜𝗗𝗢 」⬣
+│ • ${prefix}sound1
+│ • ${prefix}sound2
+│ • ${prefix}sound3
+│ • ${prefix}sound4
+│ • ${prefix}sound5
+│ • ${prefix}sound6
+│ • ${prefix}sound7
+│ • ${prefix}sound8
+│ • ${prefix}sound9
+│ • ${prefix}sound10
+│ • ${prefix}sound11
+│ • ${prefix}sound12
+│ • ${prefix}sound13
+│ • ${prefix}sound14
+│ • ${prefix}sound15
+│ • ${prefix}sound16
+│ • ${prefix}sound17
+│ • ${prefix}sound18
 ╰─⬣
-
-╭─⬣「 𝗔𝗨𝗗𝗜𝗢 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}bass *reply*
-│✾ ${prefix}slow *reply*
-│✾ ${prefix}fast *reply*
-│✾ ${prefix}robot *reply*
-│✾ ${prefix}reverse *reply video*
-╰─⬣
-
-╭─⬣「 𝗡𝗘𝗞𝗢𝗣𝗢𝗜 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}nekopoi1
-│✾ ${prefix}nekopoi2
-│✾ ${prefix}nekopoi3
-│✾ ${prefix}nekopoi4
-│✾ ${prefix}nekopoi5
-│✾ ${prefix}nekopoi6
-│✾ ${prefix}nekopoi7
-│✾ ${prefix}nekopoi8
-│✾ ${prefix}nekopoi8
-│✾ ${prefix}nekopoi9
-╰─⬣
-
-╭─⬣「 𝗡𝗦𝗙𝗪 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}nsfw 1/0
-│✾ ${prefix}neko
-│✾ ${prefix}yuri
-│✾ ${prefix}anal
-│✾ ${prefix}pussy
-│✾ ${prefix}baka
-│✾ ${prefix}kiss
-│✾ ${prefix}holo
-│✾ ${prefix}hentai2
-│✾ ${prefix}blowjob
-│✾ ${prefix}megumin
-│✾ ${prefix}trapnime
-│✾ ${prefix}waifu
-│✾ ${prefix}awoo
-│✾ ${prefix}ero
-│✾ ${prefix}hentai
-│✾ ${prefix}boobs
-│✾ ${prefix}wallpaper
-╰─⬣
-
-╭─⬣「 𝗦𝗢𝗨𝗡𝗗 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}sound1
-│✾ ${prefix}sound2
-│✾ ${prefix}sound3
-│✾ ${prefix}sound4
-│✾ ${prefix}sound5
-│✾ ${prefix}sound6
-│✾ ${prefix}sound7
-│✾ ${prefix}sound8
-│✾ ${prefix}sound9
-│✾ ${prefix}sound10
-│✾ ${prefix}sound11
-│✾ ${prefix}sound12
-│✾ ${prefix}sound13
-│✾ ${prefix}sound14
-│✾ ${prefix}sound15
-│✾ ${prefix}sound16
-│✾ ${prefix}sound17
-│✾ ${prefix}sound18
-╰─⬣
-
-╭─⬣「 𝗔𝗦𝗨𝗣𝗔𝗡 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}asupancecan
-│✾ ${prefix}asupanhijaber
-│✾ ${prefix}asupansantuy
-│✾ ${prefix}asupanukhti
-│✾ ${prefix}asupanbocil
-│✾ ${prefix}asupanghea
-│✾ ${prefix}asupanrika
-╰─⬣
-
-╭─⬣「 𝗖𝗘𝗖𝗔𝗡 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}cecanvietnam
-│✾ ${prefix}cecanmalaysia
-│✾ ${prefix}cecankorea
-│✾ ${prefix}cecanindonesia
-│✾ ${prefix}cecanjapan
-│✾ ${prefix}cecanthailand
-│✾ ${prefix}cecanchina
-╰─⬣
-
-╭─⬣「 𝗧𝗛𝗔𝗡𝗞𝗦 𝗧𝗢 」⬣
-│✾ 𝗕𝗼𝘁 𝗗𝗵𝗮𝗻𝗶 ? 
-│✾ 𝗥𝘆𝘂𝘂𝗸𝗮 𝗕𝗼𝘁𝘇
-│✾ 𝗙𝗕𝗼𝘁𝘇
-│✾ 𝗭𝗲𝗲𝗼𝗻𝗲 𝗢𝗳𝗰
-│✾ 𝗟𝗲𝘅𝘅𝘆 𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹
-│✾ 𝗭𝗲𝗿𝗼𝗬𝗧𝟳
-╰─⬣「 𝙍𝙮𝙪𝘽𝙤𝙩𝙯 3.0.0 」⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
 but = [{buttonId: `${prefix}script`,buttonText: {displayText: `SCRIPT 💻`,},type: 1}, {buttonId: `${prefix}listmenu`,buttonText: {displayText: `LIST MENU 💌`,},type: 1,},]
  sendButton(from, menu, teks, but, {quoted: ftrol})
@@ -1255,174 +1056,126 @@ break
 case 'textpromemenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 menu =
-`*Hai @${sender.split('@')[0]} ${jams}*
-
-𝙟𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙗𝙖𝙝𝙖𝙜𝙞𝙖🍵
-
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
-│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜ ${prefix} ⌟
-│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
-│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
-│✾ 𝙍𝙪𝙣 : ${runtime(process.uptime())}
-│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+`╭─⬣「 𝗠𝗘𝗡𝗨 𝗧𝗘𝗫𝗧𝗣𝗥𝗢𝗠𝗘 」⬣
+│ • ${prefix}blackpink *texto*
+│ • ${prefix}neon *texto*
+│ • ${prefix}greenneon *texto*
+│ • ${prefix}advanceglow *texto*
+│ • ${prefix}futureneon *texto*
+│ • ${prefix}sandwriting *texto*
+│ • ${prefix}sandsummer *texto*
+│ • ${prefix}sandengraved *texto*
+│ • ${prefix}metaldark *texto*
+│ • ${prefix}neonlight *texto*
+│ • ${prefix}text1917 *texto*
+│ • ${prefix}minion *texto*
+│ • ${prefix}deluxesilver *texto*
+│ • ${prefix}newyearcard *texto*
+│ • ${prefix}bloodfrosted *texto*
+│ • ${prefix}halloween *texto*
+│ • ${prefix}jokerlogo *texto*
+│ • ${prefix}fireworksparkle *texto*
+│ • ${prefix}natureleaves *texto*
+│ • ${prefix}bokeh *texto*
+│ • ${prefix}strawberry *texto*
+│ • ${prefix}box3d *texto*
+│ • ${prefix}roadwarning *texto*
+│ • ${prefix}breakwall *texto*
+│ • ${prefix}icecold *texto*
+│ • ${prefix}luxury *texto*
+│ • ${prefix}cloud *texto*
+│ • ${prefix}summersand *texto*
+│ • ${prefix}horrorblood *texto*
 ╰─⬣
-
-╭─⬣「 𝗧𝗘𝗫𝗧𝗣𝗥𝗢𝗠𝗘 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}blackpink *teks*
-│✾ ${prefix}neon *teks*
-│✾ ${prefix}greenneon *teks*
-│✾ ${prefix}advanceglow *teks*
-│✾ ${prefix}futureneon *teks*
-│✾ ${prefix}sandwriting *teks*
-│✾ ${prefix}sandsummer *teks*
-│✾ ${prefix}sandengraved *teks*
-│✾ ${prefix}metaldark *teks*
-│✾ ${prefix}neonlight *teks*
-│✾ ${prefix}text1917 *teks*
-│✾ ${prefix}minion *teks*
-│✾ ${prefix}deluxesilver *teks*
-│✾ ${prefix}newyearcard *teks*
-│✾ ${prefix}bloodfrosted *teks*
-│✾ ${prefix}halloween *teks*
-│✾ ${prefix}jokerlogo *teks*
-│✾ ${prefix}fireworksparkle *teks*
-│✾ ${prefix}natureleaves *teks*
-│✾ ${prefix}bokeh *teks*
-│✾ ${prefix}strawberry *teks*
-│✾ ${prefix}box3d *teks*
-│✾ ${prefix}roadwarning *teks*
-│✾ ${prefix}breakwall *teks*
-│✾ ${prefix}icecold *teks*
-│✾ ${prefix}luxury *teks*
-│✾ ${prefix}cloud *teks*
-│✾ ${prefix}summersand *teks*
-│✾ ${prefix}horrorblood *teks*
-╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'nsfwmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 menu =
-`*Hai @${sender.split('@')[0]}*
-
-𝙟𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙗𝙖𝙝𝙖𝙜𝙞𝙖🍵
-
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
-│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜  *${prefix}*  ⌟
-│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
-│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
-│✾ 𝙒𝙖𝙠𝙩𝙪 : ${jams}
-│✾ 𝙍𝙪𝙣𝙩𝙞𝙢𝙚 : ${runtime(process.uptime())}
-│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+`╭─⬣「 𝗠𝗘𝗡𝗨 🔞 」⬣
+│ • ${prefix}nsfw 1/0
+│ • ${prefix}neko
+│ • ${prefix}yuri
+│ • ${prefix}anal
+│ • ${prefix}pussy
+│ • ${prefix}baka
+│ • ${prefix}kiss
+│ • ${prefix}holo
+│ • ${prefix}hentai2
+│ • ${prefix}blowjob
+│ • ${prefix}megumin
+│ • ${prefix}trapnime
+│ • ${prefix}waifu
+│ • ${prefix}awoo
+│ • ${prefix}ero
+│ • ${prefix}hentai
+│ • ${prefix}boobs
+│ • ${prefix}wallpaper
 ╰─⬣
-
-╭─⬣「 𝗡𝗦𝗙𝗪 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}nsfw 1/0
-│✾ ${prefix}neko
-│✾ ${prefix}yuri
-│✾ ${prefix}anal
-│✾ ${prefix}pussy
-│✾ ${prefix}baka
-│✾ ${prefix}kiss
-│✾ ${prefix}holo
-│✾ ${prefix}hentai2
-│✾ ${prefix}blowjob
-│✾ ${prefix}megumin
-│✾ ${prefix}trapnime
-│✾ ${prefix}waifu
-│✾ ${prefix}awoo
-│✾ ${prefix}ero
-│✾ ${prefix}hentai
-│✾ ${prefix}boobs
-│✾ ${prefix}wallpaper
-╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'grupmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 menu =
-`*Hai @${sender.split('@')[0]}*
-
-𝙟𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙗𝙖𝙝𝙖𝙜𝙞𝙖🍵
-
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
-│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜  *${prefix}*  ⌟
-│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
-│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
-│✾ 𝙒𝙖𝙠𝙩𝙪 : ${jams}
-│✾ 𝙍𝙪𝙣𝙩𝙞𝙢𝙚 : ${runtime(process.uptime())}
-│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+`╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗚𝗥𝗨𝗣𝗢 」⬣
+│ • ${prefix}antiEnlace *on / off*
+│ • ${prefix}antivirtex *on / off*
+│ • ${prefix}welcome *on / off*
+│ • ${prefix}group *buka / tutup*
+│ • ${prefix}promote *@tag / reply*
+│ • ${prefix}demote *@tag / reply*
+│ • ${prefix}add *628xx*
+│ • ${prefix}kick *@tag / reply*
+│ • ${prefix}setpp *reply / cap*
+│ • ${prefix}setdesc *texto*
+│ • ${prefix}setname *texto*
+│ • ${prefix}hidetag *texto*
+│ • ${prefix}Enlacegrup
+│ • ${prefix}infogrup
+│ • ${prefix}listonline
+│ • ${prefix}resetEnlacegrup
 ╰─⬣
-
-╭─⬣「 𝗚𝗥𝗨𝗣 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}antilink *on / off*
-│✾ ${prefix}antivirtex *on / off*
-│✾ ${prefix}welcome *on / off*
-│✾ ${prefix}group *buka / tutup*
-│✾ ${prefix}promote *@tag / reply*
-│✾ ${prefix}demote *@tag / reply*
-│✾ ${prefix}add *628xx*
-│✾ ${prefix}kick *@tag / reply*
-│✾ ${prefix}setpp *reply / cap*
-│✾ ${prefix}setdesc *teks*
-│✾ ${prefix}setname *teks*
-│✾ ${prefix}hidetag *teks*
-│✾ ${prefix}linkgrup
-│✾ ${prefix}infogrup
-│✾ ${prefix}listonline
-│✾ ${prefix}resetlinkgrup
-╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'downloadmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 menu =
-`*Hai @${sender.split('@')[0]}*
-
-𝙟𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙗𝙖𝙝𝙖𝙜𝙞𝙖🍵
-
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
-│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜  *${prefix}*  ⌟
-│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
-│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
-│✾ 𝙒𝙖𝙠𝙩𝙪 : ${jams}
-│✾ 𝙍𝙪𝙣𝙩𝙞𝙢𝙚 : ${runtime(process.uptime())}
-│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+`╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗗𝗘𝗦𝗖𝗔𝗥𝗚𝗔𝗦 」⬣
+│ • ${prefix}ytmp3 *Enlace*
+│ • ${prefix}ytmp4 *Enlace*
+│ • ${prefix}playstore *search*
+│ • ${prefix}pinterest *search*
+│ • ${prefix}tiktok / tiktoknowm *Enlace*
+│ • ${prefix}tiktokwm *Enlace*
+│ • ${prefix}mediafire *Enlace*
+│ • ${prefix}google *search*
+│ • ${prefix}wiki *search*
+│ • ${prefix}yts *search*
+│ • ${prefix}play *Texto*
+│ • ${prefix}lirik *search*
+│ • ${prefix}spotify *Enlace*
+│ • ${prefix}spotifysearch *search*
+│ • ${prefix}jooxplay *Texto*
 ╰─⬣
-
-╭─⬣「 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}ytmp3 *Link*
-│✾ ${prefix}ytmp4 *Link*
-│✾ ${prefix}playstore *search*
-│✾ ${prefix}pinterest *search*
-│✾ ${prefix}tiktok / tiktoknowm *link*
-│✾ ${prefix}tiktokwm *link*
-│✾ ${prefix}mediafire *link*
-│✾ ${prefix}google *search*
-│✾ ${prefix}wiki *search*
-│✾ ${prefix}yts *search*
-│✾ ${prefix}play *teks*
-│✾ ${prefix}lirik *search*
-╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
@@ -1451,9 +1204,9 @@ menu =
 │✾ ${prefix}asupanrika
 ╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
@@ -1482,37 +1235,25 @@ menu =
 │✾ ${prefix}cecanchina
 ╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'stickermenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 menu =
-`*Hai @${sender.split('@')[0]}*
-
-𝙟𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙗𝙖𝙝𝙖𝙜𝙞𝙖🍵
-
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
-│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜ ${prefix} ⌟
-│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
-│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
-│✾ 𝙍𝙪𝙣 : ${runtime(process.uptime())}
-│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+`╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗦𝗧𝗜𝗖𝗞𝗘𝗥 」⬣
+│ • ${prefix}sticker *reply / cap*
+│ • ${prefix}toimg *reply*
+│ • ${prefix}ttp
+│ • ${prefix}attp
 ╰─⬣
-
-╭─⬣「 𝗦𝗧𝗜𝗖𝗞𝗘𝗥 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}sticker *reply / cap*
-│✾ ${prefix}toimg *reply*
-│✾ ${prefix}ttp
-│✾ ${prefix}attp
-╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
@@ -1540,40 +1281,28 @@ menu =
 │✾ ${prefix}listsurah
 ╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'ownermenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 menu =
-`*Hai @${sender.split('@')[0]}*
-
-𝙟𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙗𝙖𝙝𝙖𝙜𝙞𝙖🍵
-
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
-│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜  *${prefix}*  ⌟
-│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
-│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
-│✾ 𝙍𝙪𝙣𝙩𝙞𝙢𝙚 : ${runtime(process.uptime())}
-│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+`╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗢𝗪𝗡𝗘𝗥 」⬣
+│ • ${prefix}owner
+│ • ${prefix}bc *texto*
+│ • ${prefix}setbiobot *texto*
+│ • ${prefix}setnamabot *texto*
+│ • ${prefix}delete
+│ • ${prefix}public
+│ • ${prefix}self
 ╰─⬣
-
-╭─⬣「 𝗢𝗪𝗡𝗘𝗥 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}owner
-│✾ ${prefix}bc *Teks*
-│✾ ${prefix}setbiobot *teks*
-│✾ ${prefix}setnamabot *teks*
-│✾ ${prefix}delete
-│✾ ${prefix}public
-│✾ ${prefix}self
-╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
@@ -1759,9 +1488,9 @@ menu =
 │✾ ${prefix}truth
 ╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
@@ -1793,80 +1522,56 @@ menu =
 │✾ ${prefix}nekopoi9
 ╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'audiomenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 menu =
-`*Hai @${sender.split('@')[0]}*
-
-𝙟𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙗𝙖𝙝𝙖𝙜𝙞𝙖🍵
-
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
-│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜  *${prefix}*  ⌟
-│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
-│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
-│✾ 𝙍𝙪𝙣𝙩𝙞𝙢𝙚 : ${runtime(process.uptime())}
-│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+`╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗔𝗨𝗗𝗜𝗢 」⬣
+│ • ${prefix}bass *reply*
+│ • ${prefix}slow *reply*
+│ • ${prefix}fast *reply*
+│ • ${prefix}robot *reply*
+│ • ${prefix}reverse *reply video*
 ╰─⬣
-
-╭─⬣「 𝗔𝗨𝗗𝗜𝗢 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}bass *reply*
-│✾ ${prefix}slow *reply*
-│✾ ${prefix}fast *reply*
-│✾ ${prefix}robot *reply*
-│✾ ${prefix}reverse *reply video*
-╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'soundmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 menu =
-`*Hai @${sender.split('@')[0]}*
-
-𝙟𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙗𝙖𝙝𝙖𝙜𝙞𝙖🍵
-
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
-│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜  *${prefix}*  ⌟
-│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
-│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
-│✾ 𝙍𝙪𝙣𝙩𝙞𝙢𝙚 : ${runtime(process.uptime())}
-│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+`╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗦𝗢𝗡𝗜𝗗𝗢 」⬣
+│ • ${prefix}sound1
+│ • ${prefix}sound2
+│ • ${prefix}sound3
+│ • ${prefix}sound4
+│ • ${prefix}sound5
+│ • ${prefix}sound6
+│ • ${prefix}sound7
+│ • ${prefix}sound8
+│ • ${prefix}sound9
+│ • ${prefix}sound10
+│ • ${prefix}sound11
+│ • ${prefix}sound12
+│ • ${prefix}sound13
+│ • ${prefix}sound14
+│ • ${prefix}sound15
+│ • ${prefix}sound16
+│ • ${prefix}sound17
+│ • ${prefix}sound18
 ╰─⬣
-
-╭─⬣「 𝗦𝗢𝗨𝗡𝗗 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}sound1
-│✾ ${prefix}sound2
-│✾ ${prefix}sound3
-│✾ ${prefix}sound4
-│✾ ${prefix}sound5
-│✾ ${prefix}sound6
-│✾ ${prefix}sound7
-│✾ ${prefix}sound8
-│✾ ${prefix}sound9
-│✾ ${prefix}sound10
-│✾ ${prefix}sound11
-│✾ ${prefix}sound12
-│✾ ${prefix}sound13
-│✾ ${prefix}sound14
-│✾ ${prefix}sound15
-│✾ ${prefix}sound16
-│✾ ${prefix}sound17
-│✾ ${prefix}sound18
-╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
@@ -1884,145 +1589,109 @@ menu =
 │✾ 𝙂𝙧𝙤𝙪𝙥 : https://chat.whatsapp.com/KYFdPsjHKIr5ToVIqOAunE
 ╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'animemenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 menu =
-`*Hai @${sender.split('@')[0]}*
-
-𝙟𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙗𝙖𝙝𝙖𝙜𝙞𝙖🍵
-
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
-│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜  *${prefix}*  ⌟
-│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
-│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
-│✾ 𝙍𝙪𝙣𝙩𝙞𝙢𝙚 : ${runtime(process.uptime())}
-│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+`╭─⬣「 𝗠𝗘𝗡𝗨 𝗗𝗘 𝗔𝗡𝗜𝗠𝗘 」⬣
+│ • ${prefix}manga *search*
+│ • ${prefix}anime *search*
+│ • ${prefix}character *search*
+│ • ${prefix}kusonime *Enlace*
+│ • ${prefix}kusonimesearch *search*
+│ • ${prefix}otakudesu *Enlace*
+│ • ${prefix}otakudesusearch *search*
+│ • ${prefix}nhentaipdf *kode*
+│ • ${prefix}nhentaisearch *search*
+│ • ${prefix}nekopoi *Enlace*
+│ • ${prefix}nekopoisearch *search*
 ╰─⬣
-
-╭─⬣「 𝗔𝗡𝗜𝗡𝗘 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}manga *search*
-│✾ ${prefix}anime *search*
-│✾ ${prefix}character *search*
-│✾ ${prefix}kusonime *link*
-│✾ ${prefix}kusonimesearch *search*
-│✾ ${prefix}otakudesu *link*
-│✾ ${prefix}otakudesusearch *search*
-│✾ ${prefix}nhentaipdf *kode*
-│✾ ${prefix}nhentaisearch *search*
-│✾ ${prefix}nekopoi *link*
-│✾ ${prefix}nekopoisearch *search*
-╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'potooxymenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 menu =
-`*Hai @${sender.split('@')[0]}*
-
-𝙟𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙗𝙖𝙝𝙖𝙜𝙞𝙖🍵
-
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
-│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜  *${prefix}*  ⌟
-│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
-│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
-│✾ 𝙍𝙪𝙣𝙩𝙞𝙢𝙚 : ${runtime(process.uptime())}
-│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+`╭─⬣「 𝗠𝗘𝗡𝗨 𝗣𝗢𝗧𝗢𝗢𝗫𝗬 」⬣
+│ • ${prefix}shadow *texto*
+│ • ${prefix}cup *texto*
+│ • ${prefix}cup1 *texto*
+│ • ${prefix}romance *texto*
+│ • ${prefix}smoke *texto*
+│ • ${prefix}burnpaper *texto*
+│ • ${prefix}lovemessage *texto*
+│ • ${prefix}undergrass *texto*
+│ • ${prefix}love *texto*
+│ • ${prefix}coffe *texto*
+│ • ${prefix}woodheart *texto*
+│ • ${prefix}woodenboard *texto*
+│ • ${prefix}summer3d *texto*
+│ • ${prefix}wolfmetal *texto*
+│ • ${prefix}nature3d *texto*
+│ • ${prefix}underwater *texto*
+│ • ${prefix}golderrose *texto*
+│ • ${prefix}summernature *texto*
+│ • ${prefix}letterleaves *texto*
+│ • ${prefix}glowingneon *texto*
+│ • ${prefix}fallleaves *texto*
+│ • ${prefix}flamming *texto*
+│ • ${prefix}harrypotter *texto*
+│ • ${prefix}carvedwood *texto*
+│ • ${prefix}arcade8bit *texto1 texto2*
+│ • ${prefix}battlefield4 *texto1 texto2*
 ╰─⬣
-
-╭─⬣「 𝗣𝗢𝗧𝗢𝗢𝗫𝗬 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}shadow *teks*
-│✾ ${prefix}cup *teks*
-│✾ ${prefix}cup1 *teks*
-│✾ ${prefix}romance *teks*
-│✾ ${prefix}smoke *teks*
-│✾ ${prefix}burnpaper *teks*
-│✾ ${prefix}lovemessage *teks*
-│✾ ${prefix}undergrass *teks*
-│✾ ${prefix}love *teks*
-│✾ ${prefix}coffe *teks*
-│✾ ${prefix}woodheart *teks*
-│✾ ${prefix}woodenboard *teks*
-│✾ ${prefix}summer3d *teks*
-│✾ ${prefix}wolfmetal *teks*
-│✾ ${prefix}nature3d *teks*
-│✾ ${prefix}underwater *teks*
-│✾ ${prefix}golderrose *teks*
-│✾ ${prefix}summernature *teks*
-│✾ ${prefix}letterleaves *teks*
-│✾ ${prefix}glowingneon *teks*
-│✾ ${prefix}fallleaves *teks*
-│✾ ${prefix}flamming *teks*
-│✾ ${prefix}harrypotter *teks*
-│✾ ${prefix}carvedwood *teks*
-│✾ ${prefix}arcade8bit *text1 text2*
-│✾ ${prefix}battlefield4 *text1 text2*
-╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'REGRESAR AL MENU 🔙',},type: 1,},]
 man = fs.readFileSync('./assets/tabun.mp3');
 Ryuu.sendMessage(from, man, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
 case 'ephotomenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: troli})
 menu =
-`*Hai @${sender.split('@')[0]}*
-
-𝙟𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙗𝙖𝙝𝙖𝙜𝙞𝙖🍵
-
-╭─⬣「 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 」⬣
-│✾ 𝙋𝙧𝙚𝙛𝙞𝙭 𝘽𝙤𝙩 : ⌜  *${prefix}*  ⌟
-│✾ 𝙉𝙖𝙢𝙚𝘽𝙤𝙩 : ${botname}
-│✾ 𝙉𝙖𝙢𝙚𝙊𝙬𝙣𝙚𝙧 : ${ownername}
-│✾ 𝙍𝙪𝙣𝙩𝙞𝙢𝙚 : ${runtime(process.uptime())}
-│✾ 𝙇𝙞𝙗 : 𝘽𝙖𝙞𝙡𝙚𝙮𝙨
+`╭─⬣「 𝗠𝗘𝗡𝗨 𝗘𝗣𝗛𝗢𝗧𝗢 𝟯𝟲𝟬 」⬣
+│ • ${prefix}wetglass *texto*
+│ • ${prefix}multicolor3d *texto*
+│ • ${prefix}watercolor *texto*
+│ • ${prefix}luxurygold *texto*
+│ • ${prefix}galaxywallpaper *texto*
+│ • ${prefix}lighttext *texto*
+│ • ${prefix}beautifulflower *texto*
+│ • ${prefix}puppycute *texto*
+│ • ${prefix}royaltext *texto*
+│ • ${prefix}heartshaped *texto*
+│ • ${prefix}birthdaycake *texto*
+│ • ${prefix}galaxystyle *texto*
+│ • ${prefix}hologram3d *texto*
+│ • ${prefix}greenneon *texto*
+│ • ${prefix}glossychrome *texto*
+│ • ${prefix}greenbush *texto*
+│ • ${prefix}metallogo *texto*
+│ • ${prefix}noeltext *texto*
+│ • ${prefix}glittergold *texto*
+│ • ${prefix}textcake *texto*
+│ • ${prefix}starsnight *texto*
+│ • ${prefix}wooden3d *texto*
+│ • ${prefix}textbyname *texto*
+│ • ${prefix}writegalacy *texto*
+│ • ${prefix}galaxybat *texto*
+│ • ${prefix}snow3d *texto*
+│ • ${prefix}birthdayday *texto*
+│ • ${prefix}goldplaybutton *texto*
+│ • ${prefix}silverplaybutton *texto*
 ╰─⬣
-
-╭─⬣「 𝗘𝗣𝗛𝗢𝗧𝗢 𝟯𝟲𝟬 𝗠𝗘𝗡𝗨 」⬣
-│✾ ${prefix}wetglass *teks*
-│✾ ${prefix}multicolor3d *teks*
-│✾ ${prefix}watercolor *teks*
-│✾ ${prefix}luxurygold *teks*
-│✾ ${prefix}galaxywallpaper *teks*
-│✾ ${prefix}lighttext *teks*
-│✾ ${prefix}beautifulflower *teks*
-│✾ ${prefix}puppycute *teks*
-│✾ ${prefix}royaltext *teks*
-│✾ ${prefix}heartshaped *teks*
-│✾ ${prefix}birthdaycake *teks*
-│✾ ${prefix}galaxystyle *teks*
-│✾ ${prefix}hologram3d *teks*
-│✾ ${prefix}greenneon *teks*
-│✾ ${prefix}glossychrome *teks*
-│✾ ${prefix}greenbush *teks*
-│✾ ${prefix}metallogo *teks*
-│✾ ${prefix}noeltext *teks*
-│✾ ${prefix}glittergold *teks*
-│✾ ${prefix}textcake *teks*
-│✾ ${prefix}starsnight *teks*
-│✾ ${prefix}wooden3d *teks*
-│✾ ${prefix}textbyname *teks*
-│✾ ${prefix}writegalacy *teks*
-│✾ ${prefix}galaxybat *teks*
-│✾ ${prefix}snow3d *teks*
-│✾ ${prefix}birthdayday *teks*
-│✾ ${prefix}goldplaybutton *teks*
-│✾ ${prefix}silverplaybutton *teks*
-╰─⬣`
 teks =
-`RyuBotz 3.0.0 | Create By Ryuuka Botz
+`Monster Bot | Hecho por monsterhd4k
 ${tampilTanggal}`
 Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'BACK MENU 💌' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 👤' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 man = fs.readFileSync('./assets/tabun.mp3');
